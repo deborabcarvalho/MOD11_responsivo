@@ -1,0 +1,210 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+}
+
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    padding: 16px 0 0;
+    background-color:rgb(64, 64, 190);
+    margin-bottom: 56px;
+    color: #fff;
+}
+
+.menu > li{
+    float: left;
+    list-style: none;
+    padding: 16px;
+    margin-right: 4px;
+    border-top: 4px solid transparent;
+    background-color:none;
+    position: relative;
+}
+
+.menu{
+    display: flex;
+}
+
+.menu li:hover {
+    display: block;
+    list-style: none;
+}
+
+.menu li:hover{
+    border-color: #fff;
+}
+
+.conteudo{
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.tenis img{
+    max-width: 100%;
+}
+
+.destaque .sobre-loja{
+    display: flex;   
+}
+
+.sobre-loja img{
+    margin-right: 32px;
+    max-width: 320px;
+}
+
+ .produto .tenis{
+    display: flex;
+    font-size: 2em;
+}
+
+.tenis img{
+    margin-right: 8px;
+}
+
+h2{
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    color: rgb(64, 64, 190);
+    border-bottom: rgb(64, 64, 190) 2px solid;
+    margin-bottom: 48px;
+    font-style: italic;
+}
+
+.produto{
+    display: grid;
+    grid-template-columns: 24.3% 24.3% 24.3% 24.3%;
+    /*100% divido por 3 daria 33.3%, mas como queremos um espaçamento entre as colunas de 1%
+    tiramos 2% (column-gap de 1% entre elas) de 100%, divide por 3 novamente e dá: 32.6%*/
+    column-gap: 1%;
+    row-gap: 5%;
+}
+
+.tennis{
+    margin-top: 56px;
+}
+
+.tennis p{
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+.botao{
+    width: 100%;
+    padding: 4px 0;
+    background-color:rgb(64, 64, 190) ;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .destaque .sobre-loja{
+        display: block;   
+    }
+
+    .produto{
+        grid-template-columns: 49% 49%;
+    }
+
+    .sobre-loja img{
+        margin-bottom: 16px;
+        max-width: 100%;
+    }
+
+    .tennis p{
+        font-size: 16px;
+        margin: 60px 8px 0;
+    }
+}
+
+
+
+@media screen and (max-width: 767px) {
+   
+
+    .container{
+        max-width: 90%;
+    }
+
+    .destaque .sobre-loja{
+        display: block;   
+    }
+   
+    .sobre-loja img{
+        margin-bottom: 16px;
+        max-width: 100%;
+    }
+
+    .destaque .tenis a{
+        display: block;
+        font-size: 1.5em;
+    }
+
+    .destaque .tenis img{
+        margin-right: 0;
+    }
+
+    .produto{
+        display: block;
+    }
+
+    .produto .tenis{
+        margin-bottom: 32px;
+    }
+
+    header .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    header {
+        padding: 16px 0;
+        background-color:rgb(64, 64, 190);
+        margin-bottom: 56px;
+        color: #fff;
+    }
+    
+    .menu > li{
+        list-style: none;
+        margin-left:4px;
+        border-top: 4px solid transparent;
+        background-color:none;
+        padding: 0;
+    }
+    
+    .menu{
+        display: block;
+    }
+    
+    .menu li:hover {
+        display: block;
+        list-style: none;
+        border-top: 4px solid transparent;
+
+    }
+
+   
+  }
+
+
